@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Expense Tracker</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Adv._Project.styles.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        .container {
+            max-width: 1720px;
+        }
+
+        .content-wrapper {
+            margin-top: 10%;
+        }
+
+        .form-floating > .form-control {
+            height: calc(2.7rem + 2px) !important;
+            padding: 0.5rem 0.75rem;
+        }
+
+            .form-floating > .form-control:focus,
+            .form-floating > .form-control:not(:placeholder-shown) {
+                border-color: #6c757d;
+                box-shadow: none;
+                border-width: 1px;
+            }
+
+                .form-floating > .form-control:focus ~ label,
+                .form-floating > .form-control:not(:placeholder-shown) ~ label {
+                    transform: scale(0.85) translateY(-0.7rem) translateX(0.7rem);
+                    color: #495057;
+                }
+
+        .form-floating label {
+            padding: 0.6rem 0.9rem;
+            color: #6c757d;
+            transition: all 0.4s;
+        }
+
+        .card {
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 0 200px rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .card-wrapper {
+            padding: 10px;
+        }
+
+        #email, #password, #username, #confirmPassword {
+            border-radius: 1.4rem;
+            padding: 0.5rem 0.75rem;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn, .btn:hover {
+            padding: 0.5rem 1rem;
+            border: 1px solid #565656;
+            color: #444444;
+            border-radius: 1.4rem;
+        }
+
+        .btn-login {
+            padding: 0.5rem 1rem;
+            background-color: #00a699;
+            border: 1px solid #00a699;
+            color: #F4F4F4;
+            border-radius: 1.4rem;
+        }
+
+            .btn-login:hover {
+                background-color: #009287;
+                border-color: #009287;
+                color: #F4F4F4;
+            }
+
+        .no-account a {
+            color: #607D8B;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+            .no-account a:hover {
+                color: #2196F3;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Dashboard" asp-action="Index">Expense Tracker</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Dashboard" asp-action="Index">Home</a>
+                        </li>
+                        @if (User.IsInRole("PremiumUser"))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="premiumDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Premium Features
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="premiumDropdown">
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="PremiumFeatures" asp-action="AdvancedAnalytics">Advanced Analytics</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="PremiumFeatures" asp-action="DownloadReport">Download Reports</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="PremiumFeatures" asp-action="BudgetPlanner">Budget Planner</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        
+
+                        }
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+@*     <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - Adv._Project - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer> *@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false) 
+</body>
+</html>

@@ -1,0 +1,167 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.premium-button {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    color: white !important;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid #ff7e5f;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: block;
+    width: 300px; /* Set a fixed width */
+    margin: 0 auto; /* Center the button */
+}
+
+    .premium-button:hover {
+        background: linear-gradient(45deg, #feb47b, #ff7e5f);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+    }
+
+
+#premium-features .card {
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    #premium-features .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+#premium-features .card-title {
+    font-weight: bold;
+}
+
+#premium-features .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+}
+
+#premium-features .btn-success {
+    background-color: #28a745;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+}
+
+#premium-features .text-center h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+#advanced-analytics .card {
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#advanced-analytics .thead-dark {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+#advanced-analytics table {
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+#advanced-analytics h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#advanced-analytics p {
+    color: #6c757d;
+    font-size: 1.2rem;
+}
+
+
+/* Premium button style for "This Month" and "This Year" */
+/* General button styling for consistency */
+.btn {
+    font-weight: bold;
+    border-radius: 30px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+/* Styling for Time Filter Buttons (This Month / This Year) */
+.time-filter-btn {
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin-right: 5px;
+    font-size: 0.9rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .time-filter-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+    }
+
+/* Styling for the Currency Switch Button */
+.btn-switch {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    margin-left: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .btn-switch:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+    }
+
+/* Styling for the Add Transaction Button */
+.btn-add-transaction {
+    background: linear-gradient(90deg, #4caf50, #2e7d32);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .btn-add-transaction:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+    }

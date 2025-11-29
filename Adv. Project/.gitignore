@@ -1,0 +1,57 @@
+﻿##############
+# .NET / Visual Studio
+##############
+
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.cache
+*.dbmdl
+*.bak
+*.log
+
+##############
+# Publish / build outputs
+##############
+
+/out/
+/publish/
+/*.pdb
+*.dll
+*.exe
+
+##############
+# Sensitive configuration
+##############
+
+# Ignore all real appsettings
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Staging.json
+appsettings.Local.json
+appsettings.*.json
+
+# BUT DO NOT ignore example files
+!appsettings.json.example
+!appsettings.Development.json.example
+!appsettings.Production.json.example
+
+##############
+# User Secrets (local dev)
+##############
+
+secrets.json
+
+##############
+# Other temp files
+##############
+
+*.temp
+*.tmp
+*.log
+*.DS_Store
+Thumbs.db
