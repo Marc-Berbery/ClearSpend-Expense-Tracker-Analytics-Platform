@@ -107,6 +107,3 @@ Chart.js
 Razor Views
 
 
-<img width="1895" height="905" alt="image" src="https://github.com/user-attachments/assets/4cd71b5d-6749-4695-9a22-0024ca0b1615" />📘 ClearSpend – Expense Tracker (ASP.NET Core MVC 8)
-
-
